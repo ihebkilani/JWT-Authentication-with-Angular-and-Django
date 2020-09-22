@@ -1,4 +1,4 @@
-<h1 align="center">JWT Authentication with Django and Angular  👋</h1>
+<h1 align="center">JWT Authentication with Django and Angular 💻</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
@@ -13,21 +13,47 @@ Implement the JWT authentication model using Angular 10 for the frontend and Dja
 npm install
 ```
 
-## Usage
+
+## Create a Virtual Environment for the Django Project
+
+###  Install Virtualenv
+```sh
+$ pip3 install virtualenv
+```
+### Create a new isolated environment with custom Python version
 
 ```sh
-npm run start
+$ which python3
+/home/username/opt/python-3.6.2/bin/python
+```
+### Head over to the project’s directory and create a virtual environment as shown below:
+```sh
+$ cd ~/example.com
+$ virtualenv ~/example.com/my_project -p /home/example_username/opt/python-3.6.2/bin/python3
+```
+### Activate your virtual environment by typing:
+```sh
+$ source my_project/bin/activate
 ```
 
-## Run tests
+## Install requirements 
 
 ```sh
-npm run test
+pip install -r requirements.txt
 ```
 
-## Show your support
 
-Give a ⭐️ if this project helped you!
+## To Run the project
+For Angular 
+```sh
+ng serve
+```
+For Django
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+```sh
+python3 manage.py runserver
+```
+
+## Author
+
+👤 **Iheb KILANI**
