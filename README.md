@@ -5,7 +5,9 @@
 
 Implement the JWT authentication model using Angular 10 for the frontend and Django 2 for the backend.
 
-## Install
+## Stack
+* Angular (10.1.0)
+* Django (2.1.7)
 
 ```sh
 npm install
