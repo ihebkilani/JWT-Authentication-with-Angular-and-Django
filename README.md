@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-Implement the JWT authentication model using Angular 10 for the frontend and Django 2 for the backend.
+Implementation of the JWT authentication model using Angular 10 for the frontend and Django 2 for the backend.
 
 ## Stack
 * Angular (10.1.0)
