@@ -1,0 +1,75 @@
+
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="row w-100 m-0">
+        <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+          <div class="card col-lg-4 mx-auto">
+            <div class="card-body px-5 py-5">
+              <h3 class="card-title text-left mb-3">Register</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="first_name">Firstname</label>
+                    <input type="text" formControlName="first_name"  class="form-control p_input" [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }">
+                    <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.first_name.errors.required">First Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Lastname</label>
+                    <input type="text" class="form-control p_input" formControlName="last_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }">
+                    <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.last_name.errors.required">Last Name is required</div>
+                    </div>            
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" formControlName="username" class="form-control p_input" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                  <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Username is required</div>
+                  </div>      
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" formControlName="email" class="form-control p_input" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password"> Password</label>
+                  <input type="password" formControlName="password"  class="form-control p_input" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>        
+                </div>
+                <div class="form-group d-flex align-items-center justify-content-between">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input"> Remember me </label>
+                  </div>
+                  <a href="#" class="forgot-pass">Forgot password</a>
+                </div>
+                <div class="text-center">
+                  <button type="submit" [disabled]="loading" class="btn btn-primary btn-block enter-btn">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>        
+                    Sign Up
+                  </button>
+                </div>
+                <div class="d-flex">
+                  <button class="btn btn-facebook col mr-2">
+                    <i class="mdi mdi-facebook"></i> Facebook </button>
+                  <button class="btn btn-google col">
+                    <i class="mdi mdi-google-plus"></i> Google plus </button>
+                </div>
+                <p class="sign-up text-center">Already have an Account?<a href="login"> Sign In</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- row ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
