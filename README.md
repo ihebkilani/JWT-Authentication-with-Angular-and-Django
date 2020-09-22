@@ -9,9 +9,6 @@ Implement the JWT authentication model using Angular 10 for the frontend and Dja
 * Angular (10.1.0)
 * Django (2.1.7)
 
-```sh
-npm install
-```
 
 
 ## Create a Virtual Environment for the Django Project
@@ -46,6 +43,7 @@ pip install -r requirements.txt
 ## To Run the project
 For Angular 
 ```sh
+npm install
 ng serve
 ```
 For Django
